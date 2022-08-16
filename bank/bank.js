@@ -12,17 +12,17 @@ document.getElementById('deposit-button').addEventListener('click', function () 
     }
 
     // Step-3: Get the current deposit total
-    const depositeValue = document.getElementById('deposite-value')
-    const depositeValueText = depositeValue.innerHTML
-    const depositeValueUpdate = Number(depositeValueText) + Number(depositInputValue)
-    depositeValue.innerHTML = depositeValueUpdate
+    const depositValue = document.getElementById('deposit-value')
+    const depositValueText = depositValue.innerHTML
+    const depositValueUpdate = Number(depositValueText) + Number(depositInputValue)
+    depositValue.innerHTML = depositValueUpdate
     depositInput.value = ''
 
-    // Step-4: Get Update balence
-    const balenceValue = document.getElementById('balence-value')
-    const balenceValueText = balenceValue.innerText
-    const balenceValueUpdate = Number(balenceValueText) + Number(depositInputValue)
-    balenceValue.innerText = balenceValueUpdate
+    // Step-4: Get Update Balance
+    const balanceValue = document.getElementById('balance-value')
+    const balanceValueText = balanceValue.innerText
+    const balanceValueUpdate = Number(balanceValueText) + Number(depositInputValue)
+    balanceValue.innerText = balanceValueUpdate
 })
 
 
@@ -45,12 +45,12 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
     const withdrawValue = document.getElementById('withdraw-value')
     const withdrawValueText = withdrawValue.innerText
 
-    // Get balence value
-    const balenceValue = document.getElementById('balence-value')
-    const balenceValueText = balenceValue.innerText
+    // Get Balance value
+    const balanceValue = document.getElementById('balance-value')
+    const balanceValueText = balanceValue.innerText
 
-    // It will return whte withdraw amount is more then balence
-    if (parseFloat(withdrawInputValue) > parseFloat(balenceValueText)) {
+    // It will return whte withdraw amount is more then balance
+    if (parseFloat(withdrawInputValue) > parseFloat(balanceValueText)) {
         alert('Baper bank a taka kom.')
         return;
     }
@@ -61,7 +61,7 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
     withdrawInput.value = ''
 
 
-    // Get Balence Update
-    const balenceValueUpdate = Number(balenceValueText) - Number(withdrawInputValue)
-    balenceValue.innerText = balenceValueUpdate
+    // Get Balance Update
+    const balanceValueUpdate = Number(balanceValueText) - Number(withdrawInputValue)
+    balanceValue.innerText = balanceValueUpdate
 })
