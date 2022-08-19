@@ -1,6 +1,6 @@
 function getInputValueById(inputId) {
     const inputField = document.getElementById(inputId)
-    const inputFieldValue = parseFloat(inputField.value)
+    const inputFieldValue = Number(inputField.value)
     inputField.value = ''
     return inputFieldValue
 }
@@ -8,7 +8,7 @@ function getInputValueById(inputId) {
 
 function getTextById(textId) {
     const textField = document.getElementById(textId)
-    const textFieldValue = parseFloat(textField.innerText)
+    const textFieldValue = Number(textField.innerText)
     return textFieldValue
 }
 

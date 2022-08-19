@@ -53,7 +53,7 @@
 //     const balanceValue = document.getElementById('balance-value')
 //     const balanceValueText = balanceValue.innerText
 
-//     // It will return whte withdraw amount is more then balance
+//     // It will return while withdraw amount is more then balance
 //     if (parseFloat(withdrawInputValue) > parseFloat(balanceValueText)) {
 //         alert('Baper bank a taka kom.')
 //         return;
@@ -85,9 +85,12 @@ document.getElementById('deposit-button').addEventListener('click', function () 
     const depositValue = getTextById('deposit-value')
     const balanceValue = getTextById('balance-value')
 
+    if (inputValue == 0) {
+        alert('Please provide a number')
+    }
+
     const totalDepositValue = inputValue + depositValue
     const totalBalanceValue = inputValue + balanceValue
-
 
     getTextOfTotalValue('deposit-value', totalDepositValue)
     getTextOfTotalValue('balance-value', totalBalanceValue)
@@ -101,8 +104,17 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
     const withdrawValue = getTextById('withdraw-value')
     const balanceValue = getTextById('balance-value')
 
+    if (inputValue == 0) {
+        alert('Please provide a number')
+    }
+
     const totalwithdrawValue = withdrawValue + inputValue
     const totalBalanceValue = balanceValue - inputValue
+
+    if (totalBalanceValue < 0) {
+        alert('You don\'t have enough money')
+        return
+    }
 
     getTextOfTotalValue('withdraw-value', totalwithdrawValue)
     getTextOfTotalValue('balance-value', totalBalanceValue)
